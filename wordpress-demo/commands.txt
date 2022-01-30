@@ -11,3 +11,4 @@
 11. kubectl -n monitoring port-forward svc/prometheus-pushgateway 9091:9091 &
 12. kubectl -n monitoring port-forward svc/prometheus-server 9090:80 &
 13: Sending metrics to pushgateway: echo "some_metric 52" | curl --data-binary @- http://localhost:9091/metrics/job/some_job/a/b
+14. helm install --generate-name wordpress-demo -f wordpress-demo/values.yaml
